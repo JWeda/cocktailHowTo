@@ -38,20 +38,18 @@ toDoList.addEventListener('click', () => {
 });
 
    //listen to shake event
+window.onload = function () {
+
     var shakeEvent = new Shake({threshold: 15});
     shakeEvent.start();
-    window.addEventListener('shake', function(){
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    function shakeEventDidOccur () {
         if (userInput.value === '') {
             return;
         }
         toDoList.innerHTML += `<li class="listitem"><p>${userInput.value}</p><button class="deletetodo">×</button></li>`;
         userInput.value = '';
-    }, false);
-
-    //stop listening
-    function stopShake(){
-        shakeEvent.stop();
     }
 
-    //check if shake is supported or not.
-    if(!("ondevicemotion" in window)){alert("Not Supported");}
+};
