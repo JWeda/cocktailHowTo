@@ -2,6 +2,7 @@
 const userInput = document.querySelector('.userinput');
 const addButton = document.querySelector('.addtodo');
 const toDoList = document.querySelector('.todolist');
+const colour = document.querySelector('.inputarea');
 
 // add = list item maken, input field weer leeg maken
 addButton.addEventListener('click', () => {
@@ -45,11 +46,7 @@ window.onload = function () {
     window.addEventListener('shake', shakeEventDidOccur, false);
 
     function shakeEventDidOccur () {
-        if (userInput.value === '') {
-            return;
-        }
-        toDoList.innerHTML += `<li class="listitem"><p>${userInput.value}</p><button class="deletetodo">×</button></li>`;
-        userInput.value = '';
+        inputarea.style.backgroundColor = "pink";
     }
 
 };
