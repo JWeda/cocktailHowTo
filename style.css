@@ -1,0 +1,108 @@
+html { 
+    box-sizing: border-box; 
+}
+
+*, *:after, *:before { 
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+    background-color: #5E4B56;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inputarea {
+    background-color: #5E4B56;
+    height: 30vh;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 0.08rem solid #8c8c8c;
+    border-radius: 15px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.addtodo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 0.08rem solid #8c8c8c;
+    border-radius: 15px;
+    background-color: white;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.listarea {
+    background-color: #D7E1E8;
+    height: 70vh;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.todolist {
+    list-style: none;
+}
+
+.listitem {
+    margin: 1rem;
+    padding: 1.5rem;
+    width: 80vw;
+    background-color:#FFFFFF;
+    border: 0rem solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.deletetodo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #8c8c8c;
+    border: 0.05rem solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.listitem.done {
+   background-color: #A59AA4;
+}
+
+.listitem.done p {
+    text-decoration: line-through;
+}
+
+.listitem.done .deletetodo{
+    color: white;
+}
