@@ -40,7 +40,7 @@ const deleteItem = deleteToDo => {
 
 //delete list
 function deleteObject(){
-        deleteItem(event.target.classList.contains("listitem"));
+        deleteItem(event.target.classList.contains('listitem'));
 };
 
 
