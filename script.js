@@ -20,23 +20,39 @@ addButton.addEventListener('click', () => {
 // is niet echt best practice ivm performance en bijv. animaties
 
 //variabelen voor afvinken en verwijderen
-const toggleDone = listItem => {
-    listItem.classList.toggle('done');
-};
+// const toggleDone = listItem => {
+//     listItem.classList.toggle('done');
+// };
 
 const deleteItem = deleteToDo => {
     deleteToDo.remove();
 };
 
-//acties voor afvinken en verwijderen
-toDoList.addEventListener('click', () => {
-    if (event.target.classList.contains('listitem')) {
-        toggleDone(event.target);
-    };
-    if (event.target.classList.contains('deletetodo')) {
-        deleteItem(event.target.closest(".listitem"));
-    };
-});
+        // //acties voor afvinken en verwijderen
+        // toDoList.addEventListener('click', () => {
+        //     if (event.target.classList.contains('listitem')) {
+        //         toggleDone(event.target);
+        //     };
+        //     if (event.target.classList.contains('deletetodo')) {
+        //         deleteItem(event.target.closest(".listitem"));
+        //     };
+        // });
+
+//delete list
+function deleteObject(){
+        deleteItem(event.target.classList.contains(".listitem"));
+};
+
+
+
+//shuffle code
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+      [array[i], array[j]] = [array[j], array[i]]; // swap elements
+    }
+  }
+
 
    //listen to shake event
 window.onload = function () {
@@ -47,6 +63,7 @@ window.onload = function () {
 
     function shakeEventDidOccur () {
         inputarea.style.backgroundColor = "pink";
+        deleteObject();
     }
 
 };
